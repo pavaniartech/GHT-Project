@@ -1,5 +1,10 @@
 
 <form (ngSubmit)="onSubmit()">
+  
+  <!-- personal information -->
+  <app-personal-registration> </app-personal-registration>
+
+
   <div>
     <label for="resume">Resume:</label>
     <input type="file" id="resume" (change)="onFileChange($event, 'resume')" accept=".pdf, .docx, .jpeg, .png">

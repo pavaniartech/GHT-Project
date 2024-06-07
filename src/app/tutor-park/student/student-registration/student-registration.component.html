@@ -1,6 +1,11 @@
 
 
 <form [formGroup]="registrationForm" (ngSubmit)="onSubmit()">
+
+<!-- personal information -->
+<app-personal-registration>  </app-personal-registration>
+
+
     <h2>Additional Details After Registration</h2>
     <div>
       <label for="board">Select Board:</label>
@@ -76,6 +81,8 @@
       <label for="parentAddress">Address:</label>
       <input id="parentAddress" type="text" formControlName="parentAddress">
     </div>
+
+
     <button type="submit">Submit</button>
   </form>
   

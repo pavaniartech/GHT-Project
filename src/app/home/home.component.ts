@@ -11,7 +11,7 @@ export class HomeComponent {
 
   startAsStudent() {
     this.router.navigate(['/student-signup']);
-  }
+     }
 
   joinAsInstructor() {
     this.router.navigate(['/instructor-signup']);
@@ -20,4 +20,5 @@ export class HomeComponent {
   joinAsParent() {
     this.router.navigate(['/parent-signup']);
   }
+
 }

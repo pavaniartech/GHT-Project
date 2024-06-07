@@ -1,5 +1,4 @@
 import { NgModule } from '@angular/core';
-import { BrowserModule, provideClientHydration } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -21,6 +20,8 @@ import { FooterComponent } from './footer/footer.component';
 import { ClassesComponent } from './classes/classes.component';
 import { HomeComponent } from './home/home.component';
 import { ParentRegistrationComponent } from './parent-registration/parent-registration.component';
+import { BrowserModule, provideClientHydration } from '@angular/platform-browser';
+import { CuroselComponent } from './curosel/curosel.component';
 
 @NgModule({
   declarations: [
@@ -40,7 +41,8 @@ import { ParentRegistrationComponent } from './parent-registration/parent-regist
     FooterComponent,
     ClassesComponent,
     HomeComponent,
-    ParentRegistrationComponent
+    ParentRegistrationComponent,
+    CuroselComponent
   ],
   imports: [
     BrowserModule,

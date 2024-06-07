@@ -1,7 +1,7 @@
 import {
   Title
-} from "./chunk-4RRM5JBI.js";
-import "./chunk-HCHPHMCO.js";
+} from "./chunk-ZN4ZQIKF.js";
+import "./chunk-BBUMVJIZ.js";
 import {
   DOCUMENT,
   HashLocationStrategy,
@@ -10,7 +10,7 @@ import {
   LocationStrategy,
   PathLocationStrategy,
   ViewportScroller
-} from "./chunk-OQXAL2BI.js";
+} from "./chunk-V4I6KYGB.js";
 import {
   APP_BOOTSTRAP_LISTENER,
   APP_INITIALIZER,
@@ -78,7 +78,7 @@ import {
   ɵɵloadQuery,
   ɵɵqueryRefresh,
   ɵɵsanitizeUrlOrResourceUrl
-} from "./chunk-FCT5AU64.js";
+} from "./chunk-CHRFX2HE.js";
 import {
   BehaviorSubject,
   ConnectableObservable,
@@ -116,7 +116,7 @@ import {
   takeUntil,
   tap,
   throwError
-} from "./chunk-SXIXOCJ4.js";
+} from "./chunk-R7GQRDZ6.js";
 
 // node_modules/@angular/router/fesm2022/router.mjs
 var PRIMARY_OUTLET = "primary";
@@ -5528,7 +5528,7 @@ function mapToCanDeactivate(providers) {
 function mapToResolve(provider) {
   return (...params) => inject(provider).resolve(...params);
 }
-var VERSION = new Version("17.3.10");
+var VERSION = new Version("17.3.11");
 export {
   ActivatedRoute,
   ActivatedRouteSnapshot,
@@ -5611,7 +5611,7 @@ export {
 
 @angular/router/fesm2022/router.mjs:
   (**
-   * @license Angular v17.3.10
+   * @license Angular v17.3.11
    * (c) 2010-2024 Google LLC. https://angular.io/
    * License: MIT
    *)
