@@ -1,203 +1,126 @@
-<!-- <div class="tutor-dashboard">
-    <h1>Tutor Dashboard</h1>
-  
-    <div class="student-info card">
-      <h2>Student Information</h2>
-      
-      <div class="form-group">
-        <label for="title">Title:</label>
-        <input id="title" type="text" [(ngModel)]="student.title">
-      </div>
-
-      <div class="form-group">
-        <label for="firstName">First Name:</label>
-        <input id="firstName" type="text" [(ngModel)]="student.firstName">
-      </div>
-      <div class="form-group">
-        <label for="lastName">Last Name:</label>
-        <input id="lastName" type="text" [(ngModel)]="student.lastName">
-      </div>
-      
-      <div class="form-group">
-        <label for="class">Class:</label>
-        <input id="class" type="text" [(ngModel)]="student.class">
-      </div>
-
-      <div class="form-group">
-        <label for="location">Location:</label>
-        <input id="location" type="text" [(ngModel)]="student.location">
-      </div>
-      <div class="form-group">
-        <label for="subjects">Subjects:</label>
-        <input id="subjects" type="text" [(ngModel)]="student.subjects">
-      </div>
-      <h3>Daily Report:</h3>
-      <div class="calendar-widget"> -->
-        <!-- Add Calendar Widget Here 
-      </div>
-      <div class="form-group">
-        <label for="notes">Notes:</label>
-        <textarea id="notes" [(ngModel)]="student.notes"></textarea>
-      </div>
+<div class="dashboard">
+  <h2>Tutor Information</h2>
+  <form [formGroup]="dashboardForm" (ngSubmit)="onSubmit()">
+    <div class="form-group full-width">
+      <label for="title">Title:</label>
+      <input id="title" formControlName="title" />
     </div>
-  
-    <div class="payments-info card">
-      <h2>Payments Information</h2>
-      <div class="form-group">
-        <label for="invoices">Invoices:</label>
-        <input id="invoices" type="text" [(ngModel)]="payments.invoices">
-      </div>
-      <div class="form-group">
-        <label for="dates">Dates:</label>
-        <input id="dates" type="text" [(ngModel)]="payments.dates">
-      </div>
-      <div class="form-group">
-        <label for="status">Payment Status:</label>
-        <input id="status" type="text" [(ngModel)]="payments.status">
-      </div>
-      <button (click)="generateMonthlyInvoice()">Generate Monthly Invoice</button>
+    <div class="form-group full-width">
+      <label for="firstName">First Name:</label>
+      <input id="firstName" formControlName="firstName" />
     </div>
-  
-    <div class="test-summary card">
-      <h2>Test Summary</h2>
-      <button (click)="createNewSummary()">Create New Summary</button>
+    <div class="form-group full-width">
+      <label for="lastName">Last Name:</label>
+      <input id="lastName" formControlName="lastName" />
     </div>
-  
-    <div class="profile-section card">
-      <h2>Profile Section</h2>
-      <button (click)="editProfile()">Edit Profile</button>
-      <button (click)="demoLinks()">Demo Links</button>
+    <div class="form-group full-width">
+      <label for="location">Location:</label>
+      <input id="location" formControlName="location" />
     </div>
-  </div>
-  
--->
+    <div class="form-group full-width">
+      <label for="subjects">Subjects:</label>
+      <input id="subjects" formControlName="subjects" />
+    </div>
 
-  
+    <h2>Daily Report</h2>
+    <div class="form-group">
+      <label for="notes">Notes:</label>
+      <textarea id="notes" formControlName="notes"></textarea>
+    </div>
 
-   <div class="dashboard">
-    <h2>Tutor Information</h2>
-    <form [formGroup]="dashboardForm" (ngSubmit)="onSubmit()">
-      <div>
-        <label for="title">Title:</label>
-        <input id="title" formControlName="title" />
-      </div>
-      <div>
-        <label for="firstName">First Name:</label>
-        <input id="firstName" formControlName="firstName" />
-      </div>
-      <div>
-        <label for="lastName">Last Name:</label>
-        <input id="lastName" formControlName="lastName" />
-      </div>
-      <div>
-        <label for="location">Location:</label>
-        <input id="location" formControlName="location" />
-      </div>
-      <div>
-        <label for="subjects">Subjects:</label>
-        <input id="subjects" formControlName="subjects" />
-      </div>
-  
-      <h2>Daily Report</h2>
-      <div>
-        <label for="notes">Notes:</label>
-        <textarea id="notes" formControlName="notes"></textarea>
-      </div>
-  
-      <h2>Invoices & Payments</h2>
-      <div>
-        <label for="feeAmount">Fees Amount:</label>
-        <input id="feeAmount" type="number" formControlName="feeAmount" />
-      </div>
-      <div>
-        <button type="button" (click)="payNow()">Pay Now</button>
-      </div>
-      <div>
-        <h3>Payment History:</h3>
-        <ul>
-          <li *ngFor="let payment of paymentHistory">{{ payment }}</li>
-        </ul>
-      </div>
-  
-      <h2>My Materials</h2>
-      <div>
-        <label for="materialSubject">Subjects:</label>
-        <select id="materialSubject" formControlName="materialSubject">
-          <option *ngFor="let subject of subjects" [value]="subject">{{ subject }}</option>
-        </select>
-      </div>
-      <div>
-        <label for="materialChapter">Chapters:</label>
-        <select id="materialChapter" formControlName="materialChapter">
-          <option *ngFor="let chapter of chapters" [value]="chapter">{{ chapter }}</option>
-        </select>
-      </div>
-      <div>
-        <h3>Materials:</h3>
-        <ul>
-          <li *ngFor="let material of materials">{{ material }}</li>
-        </ul>
-      </div>
-  
-      <h2>My Assignments</h2>
-      <div>
-        <h3>Assignments:</h3>
-        <ul>
-          <li *ngFor="let assignment of assignments">{{ assignment }}</li>
-        </ul>
-      </div>
-  
-      <h2>Test Zone</h2>
-      <div>
-        <label for="testClass">Filter by Class:</label>
-        <select id="testClass" formControlName="testClass">
-          <option *ngFor="let cls of classes" [value]="cls">{{ cls }}</option>
-        </select>
-      </div>
-      <div>
-        <label for="testSubject">Filter by Subject:</label>
-        <select id="testSubject" formControlName="testSubject">
-          <option *ngFor="let subject of subjects" [value]="subject">{{ subject }}</option>
-        </select>
-      </div>
-      <div>
-        <label for="testChapter">Filter by Chapter:</label>
-        <select id="testChapter" formControlName="testChapter">
-          <option *ngFor="let chapter of chapters" [value]="chapter">{{ chapter }}</option>
-        </select>
-      </div>
-      <div>
-        <h3>Tests:</h3>
-        <ul>
-          <li *ngFor="let test of tests">{{ test }}</li>
-        </ul>
-      </div>
-  
-      <h2>Notifications</h2>
-      <div>
-        <h3>Custom Tests:</h3>
-        <ul>
-          <li *ngFor="let customTest of customTests">{{ customTest }}</li>
-        </ul>
-      </div>
-      <div>
-        <h3>Messages:</h3>
-        <ul>
-          <li *ngFor="let message of messages">{{ message }}</li>
-        </ul>
-      </div>
-  
-      <h2>Chat Support</h2>
-      <div>
-        <button type="button" (click)="loginChat()">Login</button>
-      </div>
-  
-      <h2>Post a Query</h2>
-      <div>
-        <button type="button" (click)="loginQuery()">Login</button>
-      </div>
-  
-      <button type="submit">Submit</button>
-    </form>
-  </div>
-  
+    <h2>Invoices & Payments</h2>
+    <div class="form-group">
+      <label for="feeAmount">Fees Amount:</label>
+      <input id="feeAmount" type="number" formControlName="feeAmount" />
+    </div>
+    <div class="form-group">
+      <button type="button" class="pay-now" (click)="payNow()">Pay Now</button>
+    </div>
+    <div>
+      <h3>Payment History:</h3>
+      <ul>
+        <li *ngFor="let payment of paymentHistory">{{ payment }}</li>
+      </ul>
+    </div>
+
+    <h2>My Materials</h2>
+    <div class="form-group">
+      <label for="materialSubject">Subjects:</label>
+      <select id="materialSubject" formControlName="materialSubject">
+        <option *ngFor="let subject of subjects" [value]="subject">{{ subject }}</option>
+      </select>
+    </div>
+    <div class="form-group">
+      <label for="materialChapter">Chapters:</label>
+      <select id="materialChapter" formControlName="materialChapter">
+        <option *ngFor="let chapter of chapters" [value]="chapter">{{ chapter }}</option>
+      </select>
+    </div>
+    <div>
+      <h3>Materials:</h3>
+      <ul>
+        <li *ngFor="let material of materials">{{ material }}</li>
+      </ul>
+    </div>
+
+    <h2>My Assignments</h2>
+    <div>
+      <h3>Assignments:</h3>
+      <ul>
+        <li *ngFor="let assignment of assignments">{{ assignment }}</li>
+      </ul>
+    </div>
+
+    <h2>Test Zone</h2>
+    <div class="form-group">
+      <label for="testClass">Filter by Class:</label>
+      <select id="testClass" formControlName="testClass">
+        <option *ngFor="let cls of classes" [value]="cls">{{ cls }}</option>
+      </select>
+    </div>
+    <div class="form-group">
+      <label for="testSubject">Filter by Subject:</label>
+      <select id="testSubject" formControlName="testSubject">
+        <option *ngFor="let subject of subjects" [value]="subject">{{ subject }}</option>
+      </select>
+    </div>
+    <div class="form-group">
+      <label for="testChapter">Filter by Chapter:</label>
+      <select id="testChapter" formControlName="testChapter">
+        <option *ngFor="let chapter of chapters" [value]="chapter">{{ chapter }}</option>
+      </select>
+    </div>
+    <div>
+      <h3>Tests:</h3>
+      <ul>
+        <li *ngFor="let test of tests">{{ test }}</li>
+      </ul>
+    </div>
+
+    <h2>Notifications</h2>
+    <div>
+      <h3>Custom Tests:</h3>
+      <ul>
+        <li *ngFor="let customTest of customTests">{{ customTest }}</li>
+      </ul>
+    </div>
+    <div>
+      <h3>Messages:</h3>
+      <ul>
+        <li *ngFor="let message of messages">{{ message }}</li>
+      </ul>
+    </div>
+
+    <h2>Chat Support</h2>
+    <div class="form-group">
+      <button type="button" class="support" (click)="loginChat()">Login</button>
+    </div>
+
+    <h2>Post a Query</h2>
+    <div class="form-group">
+      <button type="button" class="query" (click)="loginQuery()">Login</button>
+    </div>
+
+    <button type="submit">Submit</button>
+  </form>
+</div>

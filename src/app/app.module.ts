@@ -22,6 +22,7 @@ import { HomeComponent } from './home/home.component';
 import { ParentRegistrationComponent } from './parent-registration/parent-registration.component';
 import { BrowserModule, provideClientHydration } from '@angular/platform-browser';
 import { CuroselComponent } from './curosel/curosel.component';
+import { StudentLoginComponent } from './student-login/student-login.component';
 
 @NgModule({
   declarations: [
@@ -42,14 +43,17 @@ import { CuroselComponent } from './curosel/curosel.component';
     ClassesComponent,
     HomeComponent,
     ParentRegistrationComponent,
-    CuroselComponent
+    CuroselComponent,
+    StudentLoginComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     ReactiveFormsModule,
     FormsModule,
-    HttpClientModule
+    HttpClientModule,
+    
+
    
   ],
   providers: [
