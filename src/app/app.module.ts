@@ -22,6 +22,7 @@ import { BrowserModule, provideClientHydration } from '@angular/platform-browser
 import { CuroselComponent } from './components/home-page/curosel/curosel.component';
 import { StudentLoginComponent } from './components/student-login/student-login.component';
 import { HomePageComponent } from './components/home-page/home-page.component';
+import { TutorListComponent } from './components/tutor-list/tutor-list.component';
 
 @NgModule({
   declarations: [
@@ -43,6 +44,7 @@ import { HomePageComponent } from './components/home-page/home-page.component';
     CuroselComponent,
     StudentLoginComponent,
     HomePageComponent,
+    TutorListComponent,
   ],
   imports: [
     BrowserModule,
