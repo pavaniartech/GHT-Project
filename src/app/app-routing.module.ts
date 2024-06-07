@@ -1,9 +1,9 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { HomeComponent } from './home/home.component';
+import { HomePageComponent } from './components/home-page/home-page.component';
 import { StudentRegistrationComponent } from './tutor-park/student/student-registration/student-registration.component';
 import { TutorRegistrationComponent } from './tutor-park/tutor/tutor-registration/tutor-registration.component';
-import { ParentRegistrationComponent } from './parent-registration/parent-registration.component';
+import { ParentRegistrationComponent } from './components/parent-registration/parent-registration.component';
 import { PersonalRegistrationComponent } from './tutor-park/personal-registration/personal-registration.component';
 import { TutorDashboardComponent } from './tutor-park/tutor/tutor-dashboard/tutor-dashboard.component';
 import { StudentDashboardComponent } from './tutor-park/student/student-dashboard/student-dashboard.component';

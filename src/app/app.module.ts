@@ -14,15 +14,14 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { GurukulHomeComponent } from './gurukul-home/gurukul-home.component';
 import { CallToActionComponent } from './gurukul-home/call-to-action/call-to-action.component';
 import { HttpClientModule } from '@angular/common/http';
-import { HeaderComponent } from './header/header.component';
-import { NavbarComponent } from './navbar/navbar.component';
-import { FooterComponent } from './footer/footer.component';
-import { ClassesComponent } from './classes/classes.component';
-import { HomeComponent } from './home/home.component';
-import { ParentRegistrationComponent } from './parent-registration/parent-registration.component';
+import { NavbarComponent } from './components/navbar/navbar.component';
+import { FooterComponent } from './components/footer/footer.component';
+import { ClassesComponent } from './components/classes/classes.component';
+import { ParentRegistrationComponent } from './components/parent-registration/parent-registration.component';
 import { BrowserModule, provideClientHydration } from '@angular/platform-browser';
-import { CuroselComponent } from './curosel/curosel.component';
-import { StudentLoginComponent } from './student-login/student-login.component';
+import { CuroselComponent } from './components/home-page/curosel/curosel.component';
+import { StudentLoginComponent } from './components/student-login/student-login.component';
+import { HomePageComponent } from './components/home-page/home-page.component';
 
 @NgModule({
   declarations: [
@@ -37,14 +36,13 @@ import { StudentLoginComponent } from './student-login/student-login.component';
     PersonalRegistrationComponent,
     GurukulHomeComponent,
     CallToActionComponent,
-    HeaderComponent,
     NavbarComponent,
     FooterComponent,
     ClassesComponent,
-    HomeComponent,
     ParentRegistrationComponent,
     CuroselComponent,
     StudentLoginComponent,
+    HomePageComponent,
   ],
   imports: [
     BrowserModule,
