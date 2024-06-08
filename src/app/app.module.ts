@@ -11,8 +11,6 @@ import { StudentRegistrationComponent } from './tutor-park/student/student-regis
 import { StudentDashboardComponent } from './tutor-park/student/student-dashboard/student-dashboard.component';
 import { PersonalRegistrationComponent } from './tutor-park/personal-registration/personal-registration.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { GurukulHomeComponent } from './gurukul-home/gurukul-home.component';
-import { CallToActionComponent } from './gurukul-home/call-to-action/call-to-action.component';
 import { HttpClientModule } from '@angular/common/http';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { FooterComponent } from './components/footer/footer.component';
@@ -23,6 +21,7 @@ import { CuroselComponent } from './components/home-page/curosel/curosel.compone
 import { StudentLoginComponent } from './components/student-login/student-login.component';
 import { HomePageComponent } from './components/home-page/home-page.component';
 import { TutorListComponent } from './components/tutor-list/tutor-list.component';
+import { DashboardComponent } from './components/dashboard/dashboard.component';
 
 @NgModule({
   declarations: [
@@ -35,8 +34,6 @@ import { TutorListComponent } from './components/tutor-list/tutor-list.component
     StudentRegistrationComponent,
     StudentDashboardComponent,
     PersonalRegistrationComponent,
-    GurukulHomeComponent,
-    CallToActionComponent,
     NavbarComponent,
     FooterComponent,
     ClassesComponent,
@@ -45,6 +42,7 @@ import { TutorListComponent } from './components/tutor-list/tutor-list.component
     StudentLoginComponent,
     HomePageComponent,
     TutorListComponent,
+    DashboardComponent,
   ],
   imports: [
     BrowserModule,
